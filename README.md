@@ -18,7 +18,7 @@ The code is written in Python and not using existing libraries other than the on
 
     > You should run _usage.py_ to pressure test the Decision tree. 
 
-## 2. Pressure testing the Decision tree
+## 2 Pressure testing the Decision tree
     Generating a random dataset using the following lines of code
 
     ```python
@@ -186,7 +186,7 @@ The highest validation accuracy is found as 93.75%.
 The best model found out has a test accuracy of 95.0%.
 ```
 
-## 3. Automotive efficiency 
+## 3 Automotive efficiency 
 
 <p><a href="https://archive.ics.uci.edu/ml/datasets/auto+mpg">  Automotive efficiency</a> problem is solved using scikit learn decison tree and the decision tree developed in Section-1. 
 
@@ -232,7 +232,7 @@ RMSE:  4.297558242303572
 MAE:  3.4082256064381227
 ```
     
-## 4. Experimenting with Runtime Complexity of Decision Tree
+## 4 Experimenting with Runtime Complexity of Decision Tree
 
 We created some fake data to do some experiments on the runtime complexity of the decision tree algorithm.Random dataset with N samples and M binary features were created. Vary M and N to plot the time taken for: 1) learning the tree, 2) predicting for test data.
 
@@ -462,11 +462,6 @@ The decision surface for each round and the combined decision surface is shown.
 <p align="center">
     <img src="Images/Q6-DecisionSurface.png" width="100%">
 </p>
-    
-7. 
-    a) Implementing RandomForestClassifier() and RandomForestRegressor() classes in `tree/randomForest.py`. `q7_RandomForest.py` is for testing.
-
-     b) Generating the plots for classification data set. Fix a random seed of 42. Shuffle the dataset according to this random seed. Use the first 60% of the data for training and last 40% of the data set for testing. Include you code in `random_forest_classification.py`
 
 ## 7 Random Forest
 
