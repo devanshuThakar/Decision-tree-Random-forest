@@ -18,8 +18,9 @@ The code is written in Python and not using existing libraries other than the on
 
     > You should run _usage.py_ to pressure test the Decision tree. 
 
-## 2 Pressure testing the Decision tree
-    Generating a random dataset using the following lines of code
+## 2 Cross Validation and Nested Cross Validation
+
+Generating a random dataset using the following lines of code
 
     ```python
     from sklearn.datasets import make_classification
@@ -31,11 +32,160 @@ The code is written in Python and not using existing libraries other than the on
     plt.scatter(X[:, 0], X[:, 1], c=y)
     ```
 
-    a) Showing the usage of *your decision tree* on the above dataset. The first 70% of the data should be used for training purposes and the remaining 30% for test purposes. Show the accuracy, per-class precision and recall of the decision tree you implemented on the test dataset. 
+`classification-exp.py` contains the code for the experiments.
 
-    b) Use 5 fold cross-validation on the dataset. Using nested cross-validation find the optimum depth of the tree.
-    
-    > You should be editing `classification-exp.py` for the code containing the experiments.
+### 2a Pressure testing the Decision tree
+
+Illustrating the usuage of *decision tree* on the above dataset. The first 70% of the data is used for training purposes and the remaining 30% for test purposes. The accuracy, per-class precision and recall of the decision tree on the test dataset is shown below. 
+
+On running `classification-exp.py`, the result is printed, which is shown below. 
+```
+Training the model on 70% data and testing on remaining 30%.
+
+The accuracy for test dataset is 93.33333333333333%.
+Precision for 0 is : 0.9166666666666666
+Recall for 0 is : 0.9166666666666666
+Precision for 1 is : 0.9444444444444444
+Recall for 1 is : 0.9444444444444444
+```
+
+### 2b Cross Validation & Nested Cross Validation
+
+Cross Validation and using nested cross-validation find the optimum depth of the tree.
+
+```
+Experiments for 5-Fold cross-validation.
+
+
+For FOLD 1
+With tree depth = 2
+The accuracy for test dataset is 90.0%.
+Precision for 1 is : 1.0
+Recall for 1 is : 0.8
+Precision for 0 is : 0.8333333333333334
+Recall for 0 is : 1.0
+
+For FOLD 2
+With tree depth = 2
+The accuracy for test dataset is 95.0%.
+Precision for 0 is : 1.0
+Recall for 0 is : 0.9333333333333333
+Precision for 1 is : 0.8333333333333334
+Recall for 1 is : 1.0
+
+For FOLD 3
+With tree depth = 2
+The accuracy for test dataset is 90.0%.
+Precision for 1 is : 1.0
+Recall for 1 is : 0.8181818181818182
+Precision for 0 is : 0.8181818181818182
+Recall for 0 is : 1.0
+
+For FOLD 4
+With tree depth = 2
+The accuracy for test dataset is 85.0%.
+Precision for 1 is : 1.0
+Recall for 1 is : 0.75
+Precision for 0 is : 0.7272727272727273
+Recall for 0 is : 1.0
+
+For FOLD 5
+With tree depth = 2
+The accuracy for test dataset is 95.0%.
+Precision for 1 is : 0.9230769230769231
+Recall for 1 is : 1.0
+Precision for 0 is : 1.0
+Recall for 0 is : 0.875
+
+Experiments to find optimum depth of the tree using 5-Fold Nested Cross-Validation.
+
+First 80 smaples are used for training and validation. The last 20 samples are used for testing.
+
+For FOLD 1
+The size of training data :  (64, 2) 64
+The size of validation data :  (16, 2) 16
+With tree depth = 1
+The accuracy for validation dataset is 93.75%.
+With tree depth = 2
+The accuracy for validation dataset is 93.75%.
+With tree depth = 3
+The accuracy for validation dataset is 81.25%.
+With tree depth = 4
+The accuracy for validation dataset is 87.5%.
+With tree depth = 5
+The accuracy for validation dataset is 81.25%.
+With tree depth = 6
+The accuracy for validation dataset is 81.25%.
+
+For FOLD 2
+The size of training data :  (64, 2) 64
+The size of validation data :  (16, 2) 16
+With tree depth = 1
+The accuracy for validation dataset is 75.0%.
+With tree depth = 2
+The accuracy for validation dataset is 81.25%.
+With tree depth = 3
+The accuracy for validation dataset is 81.25%.
+With tree depth = 4
+The accuracy for validation dataset is 81.25%.
+With tree depth = 5
+The accuracy for validation dataset is 81.25%.
+With tree depth = 6
+The accuracy for validation dataset is 81.25%.
+
+For FOLD 3
+The size of training data :  (64, 2) 64
+The size of validation data :  (16, 2) 16
+With tree depth = 1
+The accuracy for validation dataset is 93.75%.
+With tree depth = 2
+The accuracy for validation dataset is 93.75%.
+With tree depth = 3
+The accuracy for validation dataset is 93.75%.
+With tree depth = 4
+The accuracy for validation dataset is 93.75%.
+With tree depth = 5
+The accuracy for validation dataset is 93.75%.
+With tree depth = 6
+The accuracy for validation dataset is 93.75%.
+
+For FOLD 4
+The size of training data :  (64, 2) 64
+The size of validation data :  (16, 2) 16
+With tree depth = 1
+The accuracy for validation dataset is 75.0%.
+With tree depth = 2
+The accuracy for validation dataset is 75.0%.
+With tree depth = 3
+The accuracy for validation dataset is 81.25%.
+With tree depth = 4
+The accuracy for validation dataset is 87.5%.
+With tree depth = 5
+The accuracy for validation dataset is 81.25%.
+With tree depth = 6
+The accuracy for validation dataset is 75.0%.
+
+For FOLD 5
+The size of training data :  (64, 2) 64
+The size of validation data :  (16, 2) 16
+With tree depth = 1
+The accuracy for validation dataset is 87.5%.
+With tree depth = 2
+The accuracy for validation dataset is 87.5%.
+With tree depth = 3
+The accuracy for validation dataset is 81.25%.
+With tree depth = 4
+The accuracy for validation dataset is 81.25%.
+With tree depth = 5
+The accuracy for validation dataset is 81.25%.
+With tree depth = 6
+The accuracy for validation dataset is 81.25%.
+
+
+The best model (having highest validation accuracy) has minimum depth of 1.
+The highest validation accuracy is found as 93.75%.
+The best model found out has a test accuracy of 95.0%.
+```
 
 ## 3 Cross Validation and Nested Cross Validation
 
