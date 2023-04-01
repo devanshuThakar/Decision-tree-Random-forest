@@ -1,6 +1,8 @@
-### Questions
+# Decision Tree & Random Forest Classifier and Regressor
 
-1. The decision tree implementation is in tree/base.py. 
+## 1 Decision Tree Implementation
+
+The decision tree implementation is in tree/base.py. 
 The code is written in Python and not using existing libraries other than the ones already imported in the code. The decision tree works for four cases: i) discrete features, discrete output; ii) discrete features, real output; iii) real features, discrete output; real features, real output. The decision tree can use GiniIndex or InformationGain as the criteria for splitting. The code is also able to plot/display the decision tree. 
 
     > Imformation about files
@@ -16,7 +18,7 @@ The code is written in Python and not using existing libraries other than the on
 
     > You should run _usage.py_ to pressure test the Decision tree. 
 
-2. 
+## 2. Pressure testing the Decision tree
     Generating a random dataset using the following lines of code
 
     ```python
@@ -35,7 +37,7 @@ The code is written in Python and not using existing libraries other than the on
     
     > You should be editing `classification-exp.py` for the code containing the experiments.
 
-### Cross Validation and Nested Cross Validation
+## 3 Cross Validation and Nested Cross Validation
 
 On running `classification-exp.py`, the result is printed, which is shown below. 
 ```
@@ -184,16 +186,9 @@ The highest validation accuracy is found as 93.75%.
 The best model found out has a test accuracy of 95.0%.
 ```
 
-3. 
-    a) Showing the usage of your decision tree for the [automotive efficiency](https://archive.ics.uci.edu/ml/datasets/auto+mpg) problem. 
-    
-    b) Compareing the performance of your model with the decision tree module from scikit learn. 
-    
-   >  `auto-efficiency.py` contains the code for experiments.
+## 3. Automotive efficiency 
 
-### Automotive efficiency 
-
-<p><a href="https://archive.ics.uci.edu/ml/datasets/auto+mpg">  Automotive efficiency</a> problem is solved using scikit learn decison tree and the decision tree developed in Q1. 
+<p><a href="https://archive.ics.uci.edu/ml/datasets/auto+mpg">  Automotive efficiency</a> problem is solved using scikit learn decison tree and the decision tree developed in Section-1. 
 
 On running `auto-efficiency.py`, the result is printed, which is shown below. 
 
@@ -237,7 +232,9 @@ RMSE:  4.297558242303572
 MAE:  3.4082256064381227
 ```
     
-4. Create some fake data to do some experiments on the runtime complexity of your decision tree algorithm. Create a dataset with N samples and M binary features. Vary M and N to plot the time taken for: 1) learning the tree, 2) predicting for test data. How do these results compare with theoretical time complexity for decision tree creation and prediction. You should do the comparison for all the four cases of decision trees. 
+## 4. Experimenting with Runtime Complexity of Decision Tree
+
+We created some fake data to do some experiments on the runtime complexity of the decision tree algorithm.Random dataset with N samples and M binary features were created. Vary M and N to plot the time taken for: 1) learning the tree, 2) predicting for test data.
 
     >`experiments.py`  contains the code for experiments. 
 
@@ -413,7 +410,7 @@ The plot for the running time by varying N from experiments and fit with theoret
 
     b) Implement AdaBoostClassifier on classification data set. Fix a random seed of 42. Shuffle the dataset according to this random seed. Use the first 60% of the data for training and last 40% of the data set for testing. Plot the decision surfaces as done  and compare the accuracy of AdaBoostClassifier using 3 estimators over decision stump. code file `q5_ADABoost.py`. 
 
-### AdaBoostClassifier
+## 5 AdaBoostClassifier
 
 sklearn decision tree is used to implement AdaBoostClassifier. The figures of part-a and part-b are shown below :
 
@@ -450,7 +447,7 @@ The combined decision surface is shown below :
 6.
     a) Implement Bagging(BaseModel, num_estimators): where base model is be DecisionTree (or sklearn decision tree) you have implemented. Code file `ensemble/bagging.py`.  `q6_Bagging.py` is for testing.[*Bagginh implemented only for DecisionTrees ]
 
-### Bagging
+## 6 Bagging
 
 Bagging was implemented using scikit learn Decision Tree. Bagging was tested for the case of  Real Input Discrete Output. A random real input with 2 features and discrete output with 2 classes was generated. 
 
@@ -471,9 +468,10 @@ The decision surface for each round and the combined decision surface is shown.
 
      b) Generating the plots for classification data set. Fix a random seed of 42. Shuffle the dataset according to this random seed. Use the first 60% of the data for training and last 40% of the data set for testing. Include you code in `random_forest_classification.py`
 
-### Random Forest
+## 7 Random Forest
 
-The classification problem is solved in Q7-b using random forest. Random forest in such way that a user can select whether to use scikit learn decision tree or the Decision tree implemented in Q1. A random set of features are selected to train the decision trees. The max-depth of tree and number of trees in forest can be given by user. The classification dataset is shown below : 
+Implemented RandomForestClassifier() and RandomForestRegressor() classes in `tree/randomForest.py`. `q7_RandomForest.py` is for testing.
+Random forest is implemented in such way that a user can select whether to use scikit learn decision tree or the Decision tree implemented in section-1. A random set of features are selected to train the decision trees. The max-depth of tree and number of trees in forest can be given by user. The classification dataset is shown below : 
 
 <p align="center">
     <img src="Images/Classification_Dataset.png"  width="50%">
