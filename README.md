@@ -3,34 +3,32 @@
 ### 1 Decision Tree Implementation
 
 The decision tree implementation is in tree/base.py. 
-The code is written in Python and not using existing libraries other than the ones already imported in the code. The decision tree works for four cases: i) discrete features, discrete output; ii) discrete features, real output; iii) real features, discrete output; real features, real output. The decision tree can use GiniIndex or InformationGain as the criteria for splitting. The code is also able to plot/display the decision tree. 
+The code is written in Python and not using existing libraries other than the ones already imported in the code. The decision tree works for four cases: i. discrete features, discrete output; ii. discrete features, real output; iii real features, discrete output; real features, real output. The decision tree can use GiniIndex or InformationGain as the criteria for splitting. The code is also able to plot/display the decision tree. 
+> Information about files 
+- `metrics.py` : This file contains the performance metrics functions.  
 
-    > Imformation about files
-  
-    - `metrics.py`: This file contains the performance metrics functions. 
+- `usage.py`: This file is used to pressure-test the code
 
-    - `usage.py`: This file is used to pressure-test the code
+- tree (Directory): Module for decision tree.
+    - `base.py` : Complete Decision Tree Class.
+    - `utils.py`: Complete all utility functions.
+    - `__init__.py`: **Do not edit this**
 
-    - tree (Directory): Module for decision tree.
-      - `base.py` : Complete Decision Tree Class.
-      - `utils.py`: Complete all utility functions.
-      - `__init__.py`: **Do not edit this**
-
-    > You should run _usage.py_ to pressure test the Decision tree. 
+> You should run _usage.py_ to pressure test the Decision tree. 
 
 ### 2 Cross Validation and Nested Cross Validation
 
 Generating a random dataset using the following lines of code
 
-    ```python
-    from sklearn.datasets import make_classification
-    X, y = make_classification(
-    n_features=2, n_redundant=0, n_informative=2, random_state=1, n_clusters_per_class=2, class_sep=0.5)
+```python
+from sklearn.datasets import make_classification
+X, y = make_classification(
+n_features=2, n_redundant=0, n_informative=2,random_state=1, n_clusters_per_class=2, class_sep=0.5)
 
-    # For plotting
-    import matplotlib.pyplot as plt
-    plt.scatter(X[:, 0], X[:, 1], c=y)
-    ```
+# For plotting
+import matplotlib.pyplot as plt
+plt.scatter(X[:, 0], X[:, 1], c=y)
+```
 
 `classification-exp.py` contains the code for the experiments.
 
@@ -144,7 +142,7 @@ MAE:  3.4082256064381227
 
 We created some fake data to do some experiments on the runtime complexity of the decision tree algorithm.Random dataset with N samples and M binary features were created. 
 
-    >`experiments.py`  contains the code for experiments. 
+> `experiments.py`  contains the code for experiments. 
 
 The runtime complexity for 4 cases of decision tree is summarized below : 
 
@@ -222,7 +220,6 @@ Random forest is implemented in such way that a user can select whether to use s
 A random seed of 43 was fixed and dataset was shuffled according to seed. The first 60% of the data for training and last 40% of the data set for testing. Since the classification data has only two features both the features were used in the trees of random forest. 
 
 A Random forest with 6 trees each having max-depth of 3 was learned for classification data. 
-
 The figure of learned trees is shown below.
 
 <p align="center">
@@ -234,7 +231,6 @@ The plot of decision surface for individual trees and combined decision surface 
 <p align="center">
     <img src="Images/Q7b-estimators.png"  width="100%">
 </p>
-
 <p align="center">
     <img src="Images/Q7b-DecisionSurface.png"  width="100%">
 </p>
