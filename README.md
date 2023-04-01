@@ -163,7 +163,7 @@ sklearn decision tree is used to implement AdaBoostClassifier. AdaBoostClassifie
 #### 5-a Real Input Discrete output
 
 A random real input with 2 features and discrete output with 2 classes was generated.
-The plot scatter plot of 3 estimators used in AdaBoostClassifier with their respective $ \alpha $  are shown. The size of the marker is proportional to the weight of the point. The color of the point represents the actual class present in training data.
+The plot scatter plot of 3 estimators used in AdaBoostClassifier with their respective $\alpha$  are shown. The size of the marker is proportional to the weight of the point. The color of the point represents the actual class present in training data.
 <p align="center">
     <img src="Images/Q5a-estimators.png" width="100%">
 </p>
@@ -171,7 +171,7 @@ The plot scatter plot of 3 estimators used in AdaBoostClassifier with their resp
 The combined decision surface is shown below : 
 
 <p align="center">
-    <img src="Images/Q5a-DecisionSurface.png" width="100%">
+    <img src="Images/Q5a-DecisionSurface.png" width="50%">
 </p>
 
 #### 5-b Classification Dataset
@@ -187,7 +187,7 @@ The combined decision surface is shown below :
 </p>
 
 <p align="center">
-    <img src="Images/Q5b-DecisionSurface.png" width="100%">
+    <img src="Images/Q5b-DecisionSurface.png" width="50%">
 </p>
 
 ### 6 Bagging
@@ -205,7 +205,7 @@ The decision surface for each round and the combined decision surface is shown.
 </p>
 
 <p align="center">
-    <img src="Images/Q6-DecisionSurface.png" width="100%">
+    <img src="Images/Q6-DecisionSurface.png" width="50%">
 </p>
 
 ### 7 Random Forest
@@ -232,5 +232,5 @@ The plot of decision surface for individual trees and combined decision surface 
     <img src="Images/Q7b-estimators.png"  width="100%">
 </p>
 <p align="center">
-    <img src="Images/Q7b-DecisionSurface.png"  width="100%">
+    <img src="Images/Q7b-DecisionSurface.png"  width="50%">
 </p>
