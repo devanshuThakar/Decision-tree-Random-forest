@@ -171,7 +171,7 @@ The plot scatter plot of 3 estimators used in AdaBoostClassifier with their resp
 The combined decision surface is shown below : 
 
 <p align="center">
-    <img src="Images/Q5a-DecisionSurface.png" width="50%">
+    <img src="Images/Q5a-DecisionSurface.png" width="40%">
 </p>
 
 #### 5-b Classification Dataset
@@ -187,7 +187,7 @@ The combined decision surface is shown below :
 </p>
 
 <p align="center">
-    <img src="Images/Q5b-DecisionSurface.png" width="50%">
+    <img src="Images/Q5b-DecisionSurface.png" width="40%">
 </p>
 
 ### 6 Bagging
@@ -205,7 +205,7 @@ The decision surface for each round and the combined decision surface is shown.
 </p>
 
 <p align="center">
-    <img src="Images/Q6-DecisionSurface.png" width="50%">
+    <img src="Images/Q6-DecisionSurface.png" width="40%">
 </p>
 
 ### 7 Random Forest
@@ -232,5 +232,5 @@ The plot of decision surface for individual trees and combined decision surface 
     <img src="Images/Q7b-estimators.png"  width="100%">
 </p>
 <p align="center">
-    <img src="Images/Q7b-DecisionSurface.png"  width="50%">
+    <img src="Images/Q7b-DecisionSurface.png"  width="30%">
 </p>
