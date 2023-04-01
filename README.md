@@ -148,10 +148,10 @@ The runtime complexity for 4 cases of decision tree is summarized below :
 
 | Decision Tree Type                    | Training Time  | Prediction Time|
 |---------------------------------------|----------------|----------------|
-| Real Input Real Output         (RIRO) | $ O(dMNlogN) $ | $O(Nd)$        |  
-| Real Input Discrete Output     (RIDO) | $ O(dMNlongN) $| $O(Nd)$        |
-| Discrete Input Real Output     (DIRO) | $ O(Md) $      | $O(Nd)$        |
-| Discrete Input Discrete Output (DIDO) | $ O(Md) $      | $O(Nd)$        |
+| Real Input Real Output         (RIRO) | $O(dMNlogN)$   | $O(Nd)$        |  
+| Real Input Discrete Output     (RIDO) | $O(dMNlongN)$  | $O(Nd)$        |
+| Discrete Input Real Output     (DIRO) | $O(Md)$        | $O(Nd)$        |
+| Discrete Input Discrete Output (DIDO) | $O(Md)$        | $O(Nd)$        |
 
 Details about the experimentation and derivation of runtime complexities is provided in `Runtime_decision_tree.md` file. 
 
