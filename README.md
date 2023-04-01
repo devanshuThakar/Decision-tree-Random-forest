@@ -1,6 +1,6 @@
-# Decision Tree & Random Forest Classifier and Regressor
+## Decision Tree & Random Forest Classifier and Regressor
 
-## 1 Decision Tree Implementation
+### 1 Decision Tree Implementation
 
 The decision tree implementation is in tree/base.py. 
 The code is written in Python and not using existing libraries other than the ones already imported in the code. The decision tree works for four cases: i) discrete features, discrete output; ii) discrete features, real output; iii) real features, discrete output; real features, real output. The decision tree can use GiniIndex or InformationGain as the criteria for splitting. The code is also able to plot/display the decision tree. 
@@ -18,7 +18,7 @@ The code is written in Python and not using existing libraries other than the on
 
     > You should run _usage.py_ to pressure test the Decision tree. 
 
-## 2 Cross Validation and Nested Cross Validation
+### 2 Cross Validation and Nested Cross Validation
 
 Generating a random dataset using the following lines of code
 
@@ -34,7 +34,7 @@ Generating a random dataset using the following lines of code
 
 `classification-exp.py` contains the code for the experiments.
 
-### 2a Pressure testing the Decision tree
+#### 2a Pressure testing the Decision tree
 
 Illustrating the usuage of *decision tree* on the above dataset. The first 70% of the data is used for training purposes and the remaining 30% for test purposes. The accuracy, per-class precision and recall of the decision tree on the test dataset is shown below. 
 
@@ -49,46 +49,13 @@ Precision for 1 is : 0.9444444444444444
 Recall for 1 is : 0.9444444444444444
 ```
 
-### 2b Cross Validation & Nested Cross Validation
+#### 2b Cross Validation & Nested Cross Validation
 
 Cross Validation and using nested cross-validation find the optimum depth of the tree.
 
 ```
 Experiments for 5-Fold cross-validation.
 
-
-For FOLD 1
-With tree depth = 2
-The accuracy for test dataset is 90.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.8
-Precision for 0 is : 0.8333333333333334
-Recall for 0 is : 1.0
-
-For FOLD 2
-With tree depth = 2
-The accuracy for test dataset is 95.0%.
-Precision for 0 is : 1.0
-Recall for 0 is : 0.9333333333333333
-Precision for 1 is : 0.8333333333333334
-Recall for 1 is : 1.0
-
-For FOLD 3
-With tree depth = 2
-The accuracy for test dataset is 90.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.8181818181818182
-Precision for 0 is : 0.8181818181818182
-Recall for 0 is : 1.0
-
-For FOLD 4
-With tree depth = 2
-The accuracy for test dataset is 85.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.75
-Precision for 0 is : 0.7272727272727273
-Recall for 0 is : 1.0
-
 For FOLD 5
 With tree depth = 2
 The accuracy for test dataset is 95.0%.
@@ -101,70 +68,6 @@ Experiments to find optimum depth of the tree using 5-Fold Nested Cross-Validati
 
 First 80 smaples are used for training and validation. The last 20 samples are used for testing.
 
-For FOLD 1
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 93.75%.
-With tree depth = 2
-The accuracy for validation dataset is 93.75%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 87.5%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 81.25%.
-
-For FOLD 2
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 75.0%.
-With tree depth = 2
-The accuracy for validation dataset is 81.25%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 81.25%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 81.25%.
-
-For FOLD 3
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 93.75%.
-With tree depth = 2
-The accuracy for validation dataset is 93.75%.
-With tree depth = 3
-The accuracy for validation dataset is 93.75%.
-With tree depth = 4
-The accuracy for validation dataset is 93.75%.
-With tree depth = 5
-The accuracy for validation dataset is 93.75%.
-With tree depth = 6
-The accuracy for validation dataset is 93.75%.
-
-For FOLD 4
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 75.0%.
-With tree depth = 2
-The accuracy for validation dataset is 75.0%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 87.5%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 75.0%.
-
 For FOLD 5
 The size of training data :  (64, 2) 64
 The size of validation data :  (16, 2) 16
@@ -180,163 +83,14 @@ With tree depth = 5
 The accuracy for validation dataset is 81.25%.
 With tree depth = 6
 The accuracy for validation dataset is 81.25%.
-
+```
 
 The best model (having highest validation accuracy) has minimum depth of 1.
 The highest validation accuracy is found as 93.75%.
 The best model found out has a test accuracy of 95.0%.
-```
-
-## 3 Cross Validation and Nested Cross Validation
-
-On running `classification-exp.py`, the result is printed, which is shown below. 
-```
-Q2-part(a) 
-
-Training the model on 70% data and testing on remaining 30%.
-
-The accuracy for test dataset is 93.33333333333333%.
-Precision for 0 is : 0.9166666666666666
-Recall for 0 is : 0.9166666666666666
-Precision for 1 is : 0.9444444444444444
-Recall for 1 is : 0.9444444444444444
-
-Q2-part(b)
-
-Experiments for 5-Fold cross-validation.
 
 
-For FOLD 1
-With tree depth = 2
-The accuracy for test dataset is 90.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.8
-Precision for 0 is : 0.8333333333333334
-Recall for 0 is : 1.0
-
-For FOLD 2
-With tree depth = 2
-The accuracy for test dataset is 95.0%.
-Precision for 0 is : 1.0
-Recall for 0 is : 0.9333333333333333
-Precision for 1 is : 0.8333333333333334
-Recall for 1 is : 1.0
-
-For FOLD 3
-With tree depth = 2
-The accuracy for test dataset is 90.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.8181818181818182
-Precision for 0 is : 0.8181818181818182
-Recall for 0 is : 1.0
-
-For FOLD 4
-With tree depth = 2
-The accuracy for test dataset is 85.0%.
-Precision for 1 is : 1.0
-Recall for 1 is : 0.75
-Precision for 0 is : 0.7272727272727273
-Recall for 0 is : 1.0
-
-For FOLD 5
-With tree depth = 2
-The accuracy for test dataset is 95.0%.
-Precision for 1 is : 0.9230769230769231
-Recall for 1 is : 1.0
-Precision for 0 is : 1.0
-Recall for 0 is : 0.875
-
-Experiments to find optimum depth of the tree using 5-Fold Nested Cross-Validation.
-
-First 80 smaples are used for training and validation. The last 20 samples are used for testing.
-
-For FOLD 1
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 93.75%.
-With tree depth = 2
-The accuracy for validation dataset is 93.75%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 87.5%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 81.25%.
-
-For FOLD 2
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 75.0%.
-With tree depth = 2
-The accuracy for validation dataset is 81.25%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 81.25%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 81.25%.
-
-For FOLD 3
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 93.75%.
-With tree depth = 2
-The accuracy for validation dataset is 93.75%.
-With tree depth = 3
-The accuracy for validation dataset is 93.75%.
-With tree depth = 4
-The accuracy for validation dataset is 93.75%.
-With tree depth = 5
-The accuracy for validation dataset is 93.75%.
-With tree depth = 6
-The accuracy for validation dataset is 93.75%.
-
-For FOLD 4
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 75.0%.
-With tree depth = 2
-The accuracy for validation dataset is 75.0%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 87.5%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 75.0%.
-
-For FOLD 5
-The size of training data :  (64, 2) 64
-The size of validation data :  (16, 2) 16
-With tree depth = 1
-The accuracy for validation dataset is 87.5%.
-With tree depth = 2
-The accuracy for validation dataset is 87.5%.
-With tree depth = 3
-The accuracy for validation dataset is 81.25%.
-With tree depth = 4
-The accuracy for validation dataset is 81.25%.
-With tree depth = 5
-The accuracy for validation dataset is 81.25%.
-With tree depth = 6
-The accuracy for validation dataset is 81.25%.
-
-
-The best model (having highest validation accuracy) has minimum depth of 1.
-The highest validation accuracy is found as 93.75%.
-The best model found out has a test accuracy of 95.0%.
-```
-
-## 3 Automotive efficiency 
+### 3 Automotive efficiency 
 
 <p><a href="https://archive.ics.uci.edu/ml/datasets/auto+mpg">  Automotive efficiency</a> problem is solved using scikit learn decison tree and the decision tree developed in Section-1. 
 
@@ -357,11 +111,15 @@ model_year        int64
 origin            int64
 car_name         object
 dtype: object
-Q3-(a) Usuage of decision tree for automotive efficiency problem.
-Since the input data is mix of real and discrete data, Two type of decision trees 
+```
+
+#### 3a Usuage of decision tree for automotive efficiency problem.
+
+Since the input data is mix of real and discrete data, two type of decision trees 
 were learned (1) For real input and (2) For discrete output. Final output (i.e. mpg) 
 can be obtained as combination from both the trees.
 
+```
 The training error for Real Input Real Output (RIRO) type decision tree having max-depth 6 is :
 RMSE:  15.032645618033587
 MAE:  14.049795918367348
@@ -369,9 +127,10 @@ MAE:  14.049795918367348
 The training error for Discrete Input Real Output (DIRO) type decision tree having max-depth 6 is : 
 RMSE:  3.341710728676004
 MAE:  2.5444350139395904
+```
 
-Q3-(b) Comparison with scikit learn
-
+#### 3b Comparison with scikit learn
+```
 The training error for Scikit-learn's decision (regression) tree having max-depth 6 is :
 RMSE:  1.8372633689388513
 MAE:  1.3030166788995607
@@ -382,7 +141,7 @@ RMSE:  4.297558242303572
 MAE:  3.4082256064381227
 ```
     
-## 4 Experimenting with Runtime Complexity of Decision Tree
+### 4 Experimenting with Runtime Complexity of Decision Tree
 
 We created some fake data to do some experiments on the runtime complexity of the decision tree algorithm.Random dataset with N samples and M binary features were created. Vary M and N to plot the time taken for: 1) learning the tree, 2) predicting for test data.
 
@@ -560,7 +319,7 @@ The plot for the running time by varying N from experiments and fit with theoret
 
     b) Implement AdaBoostClassifier on classification data set. Fix a random seed of 42. Shuffle the dataset according to this random seed. Use the first 60% of the data for training and last 40% of the data set for testing. Plot the decision surfaces as done  and compare the accuracy of AdaBoostClassifier using 3 estimators over decision stump. code file `q5_ADABoost.py`. 
 
-## 5 AdaBoostClassifier
+### 5 AdaBoostClassifier
 
 sklearn decision tree is used to implement AdaBoostClassifier. The figures of part-a and part-b are shown below :
 
@@ -597,7 +356,7 @@ The combined decision surface is shown below :
 6.
     a) Implement Bagging(BaseModel, num_estimators): where base model is be DecisionTree (or sklearn decision tree) you have implemented. Code file `ensemble/bagging.py`.  `q6_Bagging.py` is for testing.[*Bagginh implemented only for DecisionTrees ]
 
-## 6 Bagging
+### 6 Bagging
 
 Bagging was implemented using scikit learn Decision Tree. Bagging was tested for the case of  Real Input Discrete Output. A random real input with 2 features and discrete output with 2 classes was generated. 
 
@@ -613,7 +372,7 @@ The decision surface for each round and the combined decision surface is shown.
     <img src="Images/Q6-DecisionSurface.png" width="100%">
 </p>
 
-## 7 Random Forest
+### 7 Random Forest
 
 Implemented RandomForestClassifier() and RandomForestRegressor() classes in `tree/randomForest.py`. `q7_RandomForest.py` is for testing.
 Random forest is implemented in such way that a user can select whether to use scikit learn decision tree or the Decision tree implemented in section-1. A random set of features are selected to train the decision trees. The max-depth of tree and number of trees in forest can be given by user. The classification dataset is shown below : 
